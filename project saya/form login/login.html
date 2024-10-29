@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="assets/styles/login-style.css">
+    
+    <title>Login Apps</title>
+</head>
+<body>
+  
+<main>
+    
+    <header>
+        <img src="assets/images/WhatsApp Image 2024-09-23 at 23.51.39.jpeg" alt="unpam logo">
+        
+    </header>
+    
+    <form id="loginForm" class="login-input">
+        <h2 class="login-title">Login </h2>
+        <div class="input-container">
+            <label for="inputEmail">Username</label>
+            <input id="inputEmail" type="email" placeholder="Enter your email" required>
+            
+        </div>
+        <div class="input-container">
+            <label for="inputPassword">Password</label>
+            <input id="inputPassword" type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="remember-forget">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button id="buttonLogin" type="submit">Login</button>
+    </form>
+    
+</main>
+
+
+<div id="modal" class="pop-up-modal">
+    <h2>Login Failed!</h2>
+    <p>Please try again</p>
+</div>
+
+
+<script src="assets/scripts/_init.js"></script>
+<script src="assets/scripts/login-script.js"></script>
+</body>
+
+</html>

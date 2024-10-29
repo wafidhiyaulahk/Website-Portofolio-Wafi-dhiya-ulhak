@@ -1,0 +1,131 @@
+    /* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* Login form */
+
+  
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('C:\Users\wafiu\OneDrive\Desktop\Semester 5\MATA KULIAH\PEMROGRAMAN WEB I - SELASA\project lab\assets\images\WhatsApp Image 2024-09-23 at 23.51.39.jpeg');
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+
+
+main {
+    width: 100%;
+    max-width: 400px;
+    background: url('project lab\assets\images\WhatsApp Image 2024-09-19 at 23.46.08.jpeg') ;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow :  0 10px 110px rgba(15, 103, 202, 0.2);
+
+}
+
+/* Logo styling */
+main img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 90px;
+    height: auto;
+}
+
+/* Form styling */
+.login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0072ff;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-weight: 600;
+    color: #333;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Remember me and forgot password section */
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-forget a {
+    color: #0072ff;
+    text-decoration: none;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+/* Login button */
+.login-input button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0072ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-input button:hover {
+    background-color: #005bb5;
+}
+
+/* Pop-up modal */
+.pop-up-modal {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4d;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.pop-up-modal.display {
+    bottom: 50px;
+    opacity: 1;
+}

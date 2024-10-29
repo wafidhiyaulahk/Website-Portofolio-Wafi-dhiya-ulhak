@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+  
+   body {
+       font-family: 'Akaya Kanadaka';
+     margin: 0;
+     padding: 0;
+  }  
+      
+ 
+    h2 {
+       color: #aaaccc;
+       text-align: center;
+
+    }
+
+     
+    h3 {
+       color: #aaaccc;
+    }
+
+
+    footer {
+       padding: 20px;
+       color: white;
+       background-color: #000;
+    }
+
+          nav a {
+       font-size: 18px;
+       font-weight: 400;
+       text-decoration: none;
+    }
+
+
+     nav a:hover {
+       font-weight: bold;
+    }
+
+
+      .profile header {
+        margin: 10px;
+       text-align: left;
+       overflow: auto;
+       float: left;
+        box-shadow:5px 5px 7px 8px
+       
+    }
+
+      footer {
+       padding-top : 50px;
+       color: white;
+       background-color: #000;
+       text-align: center ;
+       font-weight: bold;
+    }
+    
+
+      .featured-image {
+       width: 50%;
+       max-height: 300px;
+       overflow: auto;
+    }
+
+
+     .featured-image{
+        border: 2px solid black;
+        background-color: gray;
+       margin: 20px;
+       box-shadow:5px 5px 7px 8px
+    }
+
+      .profile img {
+      max-height: 100px;
+      width: 70px;
+      overflow: auto;
+      float:left;
+    }
+      .card {
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+       border-radius: 5px;
+    }
+       
+      .jumbotron {
+      padding-top: 60px;
+      background-color: #666;
+      text-align: center;
+      font-size: 20px;
+      color:white;
+    }
+
+
+      nav li {
+      display: inline;
+      list-style-type: none;
+      margin-right: 20px;
+    }
+
+     nav {
+      background-color: #000;
+      padding: 5px;
+    }
+     
+      nav a {
+      font-size: 18px;
+      font-weight: 400px;
+      text-decoration: none;
+      color: white;
+    }
+
+      main {
+      padding: 20px;
+      overflow: auto;
+    }
+    
+    
+      #content {
+      float: left;
+      width: 75%;
+     }
+
+       aside {
+      float: right;
+      width: 25%;
+    }
+
+
+      main {
+      padding: 20px;
+      overflow: auto;
+    }
+
+
+    section {
+        text-align: center;
+      }
+      
+
+    @media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+
+
+    *{
+      box-sizing: border-box;
+    }
+
+
+      nav {
+       background-color: #000;
+       padding: 5px;
+       position: sticky;
+       top: 0;   
+    }
+
+
+     .container {
+           width: 800px;
+           border: 4px solid black;
+           overflow: auto;
+       }
+
+
+        header {
+       display: inline;
+       }
+
+
+      .clear{
+        clear:left ;
+      }
