@@ -1,0 +1,11 @@
+body{
+    padding: 25px;
+  }
+  .title {
+      color: #000000;
+  }
+
+  .center-text {
+    text-align: center; /* Untuk memposisikan teks di tengah secara horizontal */
+    margin: 0 auto;    /* Opsional: untuk memastikan elemen memiliki margin rata */
+}
