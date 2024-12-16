@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>Laporan Penjualan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #d9e2f3;
+        }
+        td.up {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        td.down {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .chart-container {
+            text-align: center;
+        }
+        .chart-container canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <table id="salesTable">
+        <thead>
+            <tr>
+                <th rowspan="2">Tahun</th>
+                <th colspan="12">Bulan</th>
+            </tr>
+            <tr>
+                <th>Januari</th>
+                <th>Februari</th>
+                <th>Maret</th>
+                <th>April</th>
+                <th>Mei</th>
+                <th>Juni</th>
+                <th>Juli</th>
+                <th>Agustus</th>
+                <th>September</th>
+                <th>Oktober</th>
+                <th>November</th>
+                <th>Desember</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2022</td>
+                <td contenteditable="true">4017</td>
+                <td contenteditable="true">6135</td>
+                <td contenteditable="true">7091</td>
+                <td contenteditable="true">5841</td>
+                <td contenteditable="true">5036</td>
+                <td contenteditable="true">4547</td>
+                <td contenteditable="true">3467</td>
+                <td contenteditable="true">3970</td>
+                <td contenteditable="true">6313</td>
+                <td contenteditable="true">3595</td>
+                <td contenteditable="true">9207</td>
+                <td contenteditable="true">5945</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td contenteditable="true">2416</td>
+                <td contenteditable="true">4136</td>
+                <td contenteditable="true">7935</td>
+                <td contenteditable="true">8004</td>
+                <td contenteditable="true">9505</td>
+                <td contenteditable="true">5026</td>
+                <td contenteditable="true">6108</td>
+                <td contenteditable="true">6343</td>
+                <td contenteditable="true">9404</td>
+                <td contenteditable="true">9280</td>
+                <td contenteditable="true">9287</td>
+                <td contenteditable="true">8689</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="chart-container">
+        <h2>Laporan Penjualan</h2>
+        <canvas id="salesChart"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('salesChart').getContext('2d');
+        var salesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+                datasets: [
+                    {
+                        label: '2022',
+                        data: [4017, 6135, 7091, 5841, 5036, 4547, 3467, 3970, 6313, 3595, 9207, 5945],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2023',
+                        data: [2416, 4136, 7935, 8004, 9505, 5026, 6108, 6343, 9404, 9280, 9287, 8689],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        function updateChart() {
+            var table = document.getElementById('salesTable');
+            var rows = table.getElementsByTagName('tr');
+
+            var data2022 = [];
+            var data2023 = [];
+
+            for (var i = 1; i <= 12; i++) {
+                var cell2022 = rows[1].cells[i];
+                var cell2023 = rows[2].cells[i];
+
+                var value2022 = parseFloat(cell2022.innerText) || 0;
+                var value2023 = parseFloat(cell2023.innerText) || 0;
+
+                // Add data to arrays
+                data2022.push(value2022);
+                data2023.push(value2023);
+
+                // Update cell styles for trends
+                if (value2023 > value2022) {
+                    cell2023.className = 'up';
+                } else if (value2023 < value2022) {
+                    cell2023.className = 'down';
+                } else {
+                    cell2023.className = '';
+                }
+            }
+
+            // Update chart data
+            salesChart.data.datasets[0].data = data2022;
+            salesChart.data.datasets[1].data = data2023;
+            salesChart.update();
+        }
+
+        document.getElementById('salesTable').addEventListener('input', function (event) {
+            var target = event.target;
+            if (target.tagName === 'TD' && target.contentEditable === 'true') {
+                updateChart();
+            }
+        });
+    </script>
+</body>
+</html>
