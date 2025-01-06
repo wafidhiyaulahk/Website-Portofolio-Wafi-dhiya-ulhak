@@ -159,129 +159,102 @@
         </div>
     </section><!-- end of service section -->
 
-    <!-- portfolio section -->
-    <section class="section" id="portfolio">
-        <br><br><br>
+   <section class="section" id="portfolio">
         <div class="container text-center">
             <h6 class="section-title mb-6">Sertifikat Pendidikan</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons mb-4">
+                <button class="btn btn-filter active" onclick="filterCertificates('all')">Semua</button>
+                <button class="btn btn-filter" onclick="filterCertificates('programming')">Dicoding_Belajar</button>
+                <button class="btn btn-filter" onclick="filterCertificates('web-development')">Sololearn</button>
+                <button class="btn btn-filter" onclick="filterCertificates('aws')">Seminar AWS</button>
+                <button class="btn btn-filter" onclick="filterCertificates('sekolah')">Sertifikat Sekolah</button>
+            </div>
+
+            <!-- Gallery -->
+            <div class="row" id="certificateGallery">
+                <div class="col-md-4 programming">
                     <a class="portfolio-card">
                         <b>Dasar Pemrograman JavaScript</b>
-                        <img src="assets/sertifikat/sertifikat_dicoding_javascript/sertifikat_dicoding_javascript_page-0001.jpg" class="portfolio-card-img" alt="Smk">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <img src="assets/sertifikat/sertifikat_dicoding_javascript/sertifikat_dicoding_javascript_page-0003.jpg" class="img-responsive rounded" >
-                                
-                            </span>                         
-                        </span>                     
-                    </a>
+                        </a>
+                        <img src="assets/sertifikat/sertifikat_dicoding_javascript/sertifikat_dicoding_javascript_page-0001.jpg" class="portfolio-card-img" alt="Javascript">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 programming">
                     <a class="portfolio-card">
-                        <b> Dasar Manajemen Proyek</b>
-                        <img src="assets/sertifikat/sertifikat-dicoding_Belajar-Dasar-Manajemen-Proyek/sertifikat dicoding_Belajar Dasar Manajemen Proyek_page-0001.jpg" class="portfolio-card-img" alt="Smk">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <img src="assets/sertifikat/sertifikat-dicoding_Belajar-Dasar-Manajemen-Proyek/sertifikat dicoding_Belajar Dasar Manajemen Proyek_page-0002.jpg" class="img-responsive rounded" >
-                                
-                            </span>                         
-                        </span>                     
-                    </a>
+                        <b>Dasar Manajemen Proyek</b>
+                        </a>
+                        <img src="assets/sertifikat/sertifikat-dicoding_Belajar-Dasar-Manajemen-Proyek/sertifikat dicoding_Belajar Dasar Manajemen Proyek_page-0001.jpg" class="portfolio-card-img" alt="Manajemen">
                 </div>
 
-
-                <div class="col-md-4">
+                <div class="col-md-4 programming">
                     <a class="portfolio-card">
-                        <b>The Seminar AWS Discovery Day</b>
-                        <img class="portfolio-card-img" src="assets\sertifikat\Seminar-AWS-Discovery-Day-Wafi-Dhiya-Ulhak\Seminar AWS Discovery Day Wafi Dhiya Ulhak_page-0001.jpg" class="img-responsive rounded" alt="Aws">
-                        
-                    </a>
+                        <b>Belajar Dasar Structured Query Language</b>
+                        </a>
+                        <img src="assets/sertifikat/SERTIFIKAT-SQL/SERTIFIKAT SQL_page-0001.jpg" class="portfolio-card-img" alt="Manajemen">
                 </div>
 
-                <div class="col-md-4">
-                    <br>
-                    <a class="portfolio-card">
-                        <b>Belajar Dasar Structured Query Language (SQL)</b>
-                        <img class="portfolio-card-img" src="assets/sertifikat/SERTIFIKAT-SQL/SERTIFIKAT SQL_page-0001.jpg" class="img-responsive rounded">    
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <br>
+                
+                <div class="col-md-4 programming">
                     <a class="portfolio-card">
                         <b>Dasar Pemrograman Menjadi Pengembang Software</b>
-                        <img src="assets/sertifikat/sertifikat_dicoding_Dasar-Pemrograman-untuk-Menjadi-Pengembang-Software/SERTIF1.png" class="portfolio-card-img" alt="Smk">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <img src="assets/sertifikat/sertifikat_dicoding_Dasar-Pemrograman-untuk-Menjadi-Pengembang-Software/SERTIF4.png" class="img-responsive rounded" >
-                                
-                            </span>                         
-                        </span>                     
-                    </a>
+                        </a>
+                        <img src="assets/sertifikat/sertifikat_dicoding_Dasar-Pemrograman-untuk-Menjadi-Pengembang-Software/SERTIF1.png" class="portfolio-card-img" alt="Manajemen">
                 </div>
-                
 
-               
 
-                <div class="col-md-4">
-                    <br>
-                   
+                <div class="col-md-4 aws">
                     <a class="portfolio-card">
-                        <a href="https://www.sololearn.com/certificates/CC-WNJ6FBZH" class="portfolio-card">
-                        <b>Introduction to HTML</b>
-                        <img class="portfolio-card-img" src="assets/sertifikat/sertifikat sololearn/c975f720-6062-4e68-8614-f7ad766ff978 (1).jpg" class="img-responsive rounded" alt="html">
-                        
+                        <b>The Seminar AWS Discovery Day</b><br><br>
+                        </a>
+                        <img src="assets\sertifikat\Seminar-AWS-Discovery-Day-Wafi-Dhiya-Ulhak\Seminar AWS Discovery Day Wafi Dhiya Ulhak_page-0001.jpg" class="portfolio-card-img" alt="AWS">
+                </div>
+
+                <div class="col-md-4 web-development">
+                    <a class="portfolio-card">
+                       
+                        <b>Introduction to HTML</b><br><br>
+                        <a href="https://www.sololearn.com/certificates/CC-WNJ6FBZH" >
+                        <img src="assets/sertifikat/sertifikat sololearn/c975f720-6062-4e68-8614-f7ad766ff978 (1).jpg" class="portfolio-card-img" alt="HTML">
                     </a>
                 </div>
 
-                <div class="col-md-4">
-                    <br>    
+                <div class="col-md-4 web-development">
                     <a class="portfolio-card">
-                        <a href="https://www.sololearn.com/certificates/CC-LVOSWWSW" class="portfolio-card">
                         <b>Introduction to CSS</b>
-                        <img class="portfolio-card-img" src="assets/sertifikat/sertifikat sololearn/0b75b627-5dfa-4ff3-85aa-3e4e14f00983 (1).jpg" class="img-responsive rounded" alt="html">
-                        
+                        <a href="https://www.sololearn.com/certificates/CC-LVOSWWSW" >
+                        <img src="assets/sertifikat/sertifikat sololearn/0b75b627-5dfa-4ff3-85aa-3e4e14f00983 (1).jpg" class="portfolio-card-img" alt="CSS">
                     </a>
                 </div>
 
-                <div class="col-md-4">
-                    <br>    
+                <div class="col-md-4 web-development">
                     <a class="portfolio-card">
-                        <a href="https://www.sololearn.com/certificates/CC-ERKGAEJ6" class="portfolio-card">
                         <b>Introduction to JavaScript</b>
-                        <img class="portfolio-card-img" src="assets/sertifikat/sertifikat sololearn/f6c6c9e2-da95-434b-90c1-e2d58fcc481c.jpg" class="img-responsive rounded" alt="html">
-                        
+                        <a href="https://www.sololearn.com/certificates/CC-ERKGAEJ6" >
+                        <img src="assets/sertifikat/sertifikat sololearn/f6c6c9e2-da95-434b-90c1-e2d58fcc481c.jpg" class="portfolio-card-img" alt="JS">
                     </a>
                 </div>
-       
-                <div class="col-md-4">
-                    <br>    
+
+                <div class="col-md-4 web-development">
                     <a class="portfolio-card">
-                        <a href="https://www.sololearn.com/certificates/CC-ERKGAEJ6" class="portfolio-card">
+                       
                         <b>JavaScript Intermediate</b>
-                        <img class="portfolio-card-img" src="img project\d6db86d6-da07-4fe4-a42b-b5cf92e78628 (1).jpg" class="img-responsive rounded" alt="html">
-                        
+                        <a href="https://www.sololearn.com/certificates/CC-ERKGAEJ6" >
+                        <img src="img project\d6db86d6-da07-4fe4-a42b-b5cf92e78628 (1).jpg" class="portfolio-card-img" alt="CSS">
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <br>
+
+                <div class="col-md-4 sekolah">
                     <a class="portfolio-card">
                         <b>Completing Routing Configuration</b>
-                        <img src="assets\sertifikat\WhatsApp Image 2024-10-03 at 22.51.33.jpeg" class="portfolio-card-img" alt="Smk">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <img src="assets\sertifikat\WhatsApp Image 2024-10-03 at 22.51.34.jpeg" class="img-responsive rounded" >
-                                
-                            </span>                         
-                        </span>                     
-                    </a>
+                        </a>
+                        <img src="assets/sertifikat/WhatsApp Image 2024-10-03 at 22.51.33.jpeg" class="portfolio-card-img" alt="Routing">
                 </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
+            </div>
+        </div>
+    </section>
+
 
  <!-- pricing section --> 
 <!-- pricing section --> 
