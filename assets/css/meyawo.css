@@ -12303,3 +12303,70 @@ pre .code {
 .credit a:hover {
   color: #4A2C85; /* Warna saat hover untuk footer (opsional) */
 }
+
+  /* CSS untuk gaya */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #4d8fd6;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn.active {
+            background-color: #0056b3;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-4 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .portfolio-card {
+            display: block;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-card-img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
